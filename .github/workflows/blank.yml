@@ -34,3 +34,9 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+  
+  progress-bar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: docker pull
+        run: docker pull screwdrivercd/screwdriver
