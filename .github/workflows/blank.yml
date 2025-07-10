@@ -40,3 +40,7 @@ jobs:
     steps:
       - name: docker pull
         run: docker pull screwdrivercd/screwdriver
+      - name: creat file
+        run: dd if=/dev/urandom of=./bigfile bs=$((1024*1024)) count=1024
+      - name: curl
+        run:  curl --progress-bar -o /tmp/bigfile file://$(pwd)/bigfile
