@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: apt install
-        run: apt install docker
+        run: sudo apt install jq
   
   progress-bar:
     if: github.event_name == 'workflow_dispatch'
