@@ -35,8 +35,12 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Create annotation for build error
-        run: echo "::error file=app.js,line=1::Missing semicolon"
+      - name: workflow command
+        run: | 
+            echo "::error file=app.js,line=1::Missing semicolon"
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"
   
   progress-bar:
     if: github.event_name == 'workflow_dispatch'
