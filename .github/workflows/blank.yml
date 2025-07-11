@@ -53,8 +53,10 @@ jobs:
     steps:
       - name: env
         run: env
-      - name: apt install
-        run: sudo apt install moby-engine
+      - name: mysql -p
+        run: mysql -p
+      #- name: apt install
+      #  run: sudo apt install moby-engine
   
   progress-bar:
     if: github.event_name == 'workflow_dispatch'
