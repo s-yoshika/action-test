@@ -40,7 +40,7 @@ jobs:
           
       - name: workflow command
         run: | 
-            echo "::error file=app.js,line=1::Missing semicolon"
+            echo "::error file=test.sh,line=5::test failed"
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
