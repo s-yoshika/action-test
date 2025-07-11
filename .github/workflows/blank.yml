@@ -50,13 +50,15 @@ jobs:
             echo "pass: himitsu"
   prompt:
     runs-on: ubuntu-latest
+    env:
+      DEBIAN_FRONTEND: interactive
     steps:
       - name: env
         run: env
       - name: mysql -p
         run: mysql -p
-      #- name: apt install
-      #  run: sudo apt install moby-engine
+      - name: apt install
+        run: sudo apt install moby-engine
   
   progress-bar:
     if: github.event_name == 'workflow_dispatch'
