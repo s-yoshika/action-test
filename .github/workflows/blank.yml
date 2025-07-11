@@ -39,7 +39,7 @@ jobs:
         run: echo "::error file=app.js,line=1::Missing semicolon"
   
   progress-bar:
-    on: workflow_dispatch
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - name: docker pull
