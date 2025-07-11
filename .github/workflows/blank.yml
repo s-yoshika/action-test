@@ -46,6 +46,8 @@ jobs:
             echo "::endgroup::"
             echo "::add-mask::$PASS"
             echo "pass: $PASS"
+            echo "::add-mask::himitsu"
+            echo "pass: himitsu"
   
   progress-bar:
     if: github.event_name == 'workflow_dispatch'
