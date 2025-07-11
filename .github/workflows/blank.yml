@@ -34,8 +34,12 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+          
+      - name: Create annotation for build error
+        run: echo "::error file=app.js,line=1::Missing semicolon"
   
   progress-bar:
+    on: workflow_dispatch
     runs-on: ubuntu-latest
     steps:
       - name: docker pull
