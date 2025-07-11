@@ -51,8 +51,8 @@ jobs:
   prompt:
     runs-on: ubuntu-latest
     steps:
-      - name: Read input
-        run: read
+      - name: apt install
+        run: apt install docker
   
   progress-bar:
     if: github.event_name == 'workflow_dispatch'
