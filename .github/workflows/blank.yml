@@ -44,7 +44,8 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
-            echo "::add-mask::$PASS"
+      - name: mask log
+        run: echo "::add-mask::$PASS"
   
   progress-bar:
     if: github.event_name == 'workflow_dispatch'
