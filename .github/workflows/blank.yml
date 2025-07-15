@@ -41,7 +41,7 @@ jobs:
       - name: workflow command
         run: | 
             echo "::error file=test.sh,line=5::test failed"
-            echo "::group::My title"
+            print "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
             echo "::add-mask::$PASS"
