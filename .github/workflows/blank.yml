@@ -55,6 +55,8 @@ jobs:
         run: env
       - name: tty
         run: tty
+      - name: pipe
+        run: echo test | read
       - name: mysql -p
         run: mysql -p
       - name: apt install
