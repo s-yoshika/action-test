@@ -53,10 +53,10 @@ jobs:
     steps:
       - name: env
         run: env
-      - name: tty
-        run: tty
       - name: pipe
         run: echo test | read
+      - name: tty
+        run: tty
       - name: mysql -p
         run: mysql -p
       - name: apt install
